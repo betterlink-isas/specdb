@@ -5,6 +5,9 @@ import * as express from "express";
 import * as bodyParser from "body-parser";
 import * as path from "path";
 import * as fs from "fs";
+// markdown-it-plantuml doesn't have any typings
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const mipuml = require("markdown-it-plantuml");
 
 const initAll = async (): Promise<void> => {
   logger.info("Starting SpecDB");
@@ -26,7 +29,7 @@ const initAll = async (): Promise<void> => {
 
       return "";
     }
-  });
+  }).use(mipuml);
 
   const app = express();
   const staticDir = path.join("..", "dist", "static");

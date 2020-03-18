@@ -6,6 +6,7 @@ dependencies:
   highlight.js: 9.18.1
   linkify-it: 2.2.0
   markdown-it: 10.0.0
+  markdown-it-plantuml: 1.4.1
   winston: 3.2.1
   winston-daily-rotate-file: 4.4.2_winston@3.2.1
 devDependencies:
@@ -1352,6 +1353,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
+  /markdown-it-plantuml/1.4.1:
+    dev: false
+    resolution:
+      integrity: sha512-13KgnZaGYTHBp4iUmGofzZSBz+Zj6cyqfR0SXUIc9wgWTto5Xhn7NjaXYxY0z7uBeTUMlc9LMQq5uP4OM5xCHg==
   /markdown-it/10.0.0:
     dependencies:
       argparse: 1.0.10
@@ -2286,6 +2291,7 @@ specifiers:
   highlight.js: ^9.18.1
   linkify-it: ^2.2.0
   markdown-it: ^10.0.0
+  markdown-it-plantuml: ^1.4.1
   ts-jest: ^25.2.1
   typescript: ^3.8.3
   winston: ^3.2.1
