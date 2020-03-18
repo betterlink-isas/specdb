@@ -90,7 +90,7 @@ const initAll = async (): Promise<void> => {
     }
   });
   
-  app.listen(8080, () => logger.info(`Server started on port 8080`));
+  app.listen(38080, () => logger.info(`Server started on port 38080`));
 
 };
 initAll();
