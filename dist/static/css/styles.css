@@ -1,0 +1,31 @@
+.fullheight {
+  height: 100vh;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+.underline {
+  text-decoration: underline;
+}
+
+.shadow-right {
+  -webkit-box-shadow: 4px 0px 2px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 0px 2px -3px rgba(0,0,0,0.75);
+  box-shadow: 4px 0px 2px -3px rgba(0,0,0,0.75);
+}
+.border-right-white {
+  border-right: 2px solid #ffffff;
+}
+.main-container {
+  margin-left: 325px;
+  margin-right: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+code {
+  background-color: rgba(0, 0, 0, .1);
+}
