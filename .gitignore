@@ -1,5 +1,7 @@
-node_modules/
-run/
 build/
-tsconfig.tsbuildinfo
+run/
+node_modules/
+pnpm-lock.yaml
 *.log
+*.tsbuildinfo
+

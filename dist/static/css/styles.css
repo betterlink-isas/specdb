@@ -25,8 +25,21 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+.main-container ul li {
+ 	list-style-type: circle;
+}
+.main-container ol li {
+	list-style-type: decimal;
+}
+pre code {
+  padding: 2px;
+}
 code {
+<<<<<<< HEAD
   background-color: rgba(0,0,0,.1);
+=======
+  background-color: rgba(0,0,0,0.1);
+>>>>>>> updated
 }
 @media only screen and (min-width: 992px) {
   .main-container {

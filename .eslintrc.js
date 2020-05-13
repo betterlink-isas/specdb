@@ -35,6 +35,8 @@ module.exports = {
     "import/first": ["warn"],
     "import/exports-last": ["warn"],
     "import/no-duplicates": ["warn"],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_"}],
     "quotes": [
       "error", "double", { "allowTemplateLiterals": true }
     ],

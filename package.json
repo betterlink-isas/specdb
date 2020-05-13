@@ -2,41 +2,35 @@
   "name": "specdb",
   "version": "1.0.0",
   "description": "A website to display BetterLink specifications",
-  "main": "./bin/main.js",
+  "main": "./build/main.js",
   "scripts": {
-    "test": "jest",
     "build": "tsc --build",
     "clean": "tsc --build --clean",
-    "ready": "npm run clean && npm run build && rm -rf bin/ && mkdir -p bin/ && cp -r build/*{.js,.d.ts} bin/",
     "start": "npm run build && cd run/ && node ../build/main.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.teamisotope.com/betterlink-isas/specdb"
+    "url": "https://github.com/betterlink-isas/specdb"
   },
-  "author": "ThePuzzlemaker",
+  "author": "BetterLink ISAS",
   "license": "MIT",
   "devDependencies": {
-    "@types/body-parser": "^1.19.0",
-    "@types/ejs": "^3.0.1",
-    "@types/express": "^4.17.3",
+    "@types/ejs": "^3.0.3",
+    "@types/express": "^4.17.6",
     "@types/highlight.js": "^9.12.3",
-    "@types/jest": "^25.1.4",
     "@types/linkify-it": "^2.1.0",
     "@types/markdown-it": "^0.0.9",
-    "@types/node": "^13.9.1",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
+    "@types/node": "^13.13.6",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-prefer-arrow": "^1.1.7",
-    "ts-jest": "^25.2.1",
-    "typescript": "^3.8.3"
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prefer-arrow": "^1.2.1",
+    "typescript": "^3.9.2"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
     "chalk": "^3.0.0",
-    "ejs": "^3.0.1",
+    "ejs": "^3.1.2",
     "express": "^4.17.1",
     "highlight.js": "^9.18.1",
     "linkify-it": "^2.2.0",
@@ -44,16 +38,5 @@
     "markdown-it-plantuml": "^1.4.1",
     "winston": "^3.2.1",
     "winston-daily-rotate-file": "^4.4.2"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "ts-jest"
-    },
-    "testRegex": "/tests/.*\\.(ts|tsx|js)$"
   }
 }

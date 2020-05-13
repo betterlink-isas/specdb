@@ -12,9 +12,9 @@
     "removeComments": false,
     "strict": true,
     "baseUrl": "./",
-    "types": ["node", "jest"],
+    "types": ["node"],
     "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": ["./node_modules", "./build", "./docs", "./bin", "./tests", "./dist"]
+  "exclude": ["./node_modules", "./build", "./dist"]
 }
