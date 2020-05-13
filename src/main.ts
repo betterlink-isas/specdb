@@ -4,9 +4,6 @@ import * as hljs from "highlight.js";
 import * as express from "express";
 import * as path from "path";
 import * as fs from "fs";
-// markdown-it-plantuml doesn't have any typings
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const mipuml = require("markdown-it-plantuml");
 
 // markdown-it-plantuml doesn't have any typings
 // eslint-disable-next-line @typescript-eslint/no-var-requires
