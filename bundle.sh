@@ -8,6 +8,7 @@
 set -o xtrace
 # Clone the Git repo if it doesn't already exist
 git clone https://github.com/betterlink-isas/specdb.git specdb 2> /dev/null
+set -Eeuxo pipefail
 cd specdb
 # Install necessary packages to build
 npm install
@@ -19,8 +20,8 @@ cd ..
 cp -r specdb/build .
 cp -r specdb/dist .
 cp -r specdb/package.json .
-# Install only production dependencies
-npm install --only=production
+# Install dependencies again but in local directory to ensure package-lock.json is up to date
+npm install
 # Make owner/group root for correct UID/GID in container
 chown -R root:root .
 # Build docker container
