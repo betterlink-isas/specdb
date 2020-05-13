@@ -1,0 +1,24 @@
+# This is an example docker-compose configuration for SpecDB.
+# This is mostly copied from one I had lying around but it works for most uses.
+version: "2"
+
+networks:
+  specdb:
+    external: false
+
+volumes:
+  specdb:
+    driver: local
+
+services:
+  server:
+    image: betterlink/specdb:latest
+    restart: always
+    networks:
+      - specdb
+    volumes:
+      - specdb:/usr/src/specdb/run
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "8080:8080"
