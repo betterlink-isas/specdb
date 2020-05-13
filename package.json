@@ -4,8 +4,8 @@
   "description": "A website to display BetterLink specifications",
   "main": "./build/main.js",
   "scripts": {
-    "build": "tsc --build",
-    "clean": "tsc --build --clean",
+    "build": "npx tsc --build",
+    "clean": "npx tsc --build --clean",
     "start": "npm run build && cd run/ && node ../build/main.js"
   },
   "repository": {
