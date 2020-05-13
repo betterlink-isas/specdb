@@ -4,6 +4,15 @@ import * as chalk from "chalk";
 const format = winston.format;
 const { combine, timestamp } = format;
 
+const fileFormat = combine(
+    timestamp({
+        format: "YYYY-MM-DD HH:mm:ss"
+    }),
+    format.printf(({ level, message, timestamp }): string => {
+        return `[${timestamp}] [${level.toUpperCase()}] [specdb]: ${message}`;
+    })
+);
+
 export const logger = winston.createLogger({
     level: "debug",
     format: combine(
@@ -30,14 +39,7 @@ export const logger = winston.createLogger({
             zippedArchive: true,
             maxSize: "20m",
             maxFiles: "14d",
-            format: combine(
-                timestamp({
-                    format: "YYYY-MM-DD HH:mm:ss"
-                }),
-                format.printf(({ level, message, timestamp }): string => {
-                    return `[${timestamp}] [${level.toUpperCase()}] [specdb]: ${message}`;
-                })
-            )
+            format: fileFormat
         }),
         new DailyRotateFile({
             filename: "log/info-%DATE%.log",
@@ -46,14 +48,7 @@ export const logger = winston.createLogger({
             zippedArchive: true,
             maxSize: "20m",
             maxFiles: "14d",
-            format: combine(
-                timestamp({
-                    format: "YYYY-MM-DD HH:mm:ss"
-                }),
-                format.printf(({ level, message, timestamp }): string => {
-                    return `[${timestamp}] [${level.toUpperCase()}] [specdb]: ${message}`;
-                })
-            )
+            format: fileFormat
         }),
         new DailyRotateFile({
             filename: "log/debug-%DATE%.log",
@@ -62,14 +57,7 @@ export const logger = winston.createLogger({
             zippedArchive: true,
             maxSize: "20m",
             maxFiles: "14d",
-            format: combine(
-                timestamp({
-                    format: "YYYY-MM-DD HH:mm:ss"
-                }),
-                format.printf(({ level, message, timestamp }): string => {
-                    return `[${timestamp}] [${level.toUpperCase()}] [specdb]: ${message}`;
-                })
-            )
+            format: fileFormat
         }),
         new winston.transports.Console({ level: "debug" })
     ],

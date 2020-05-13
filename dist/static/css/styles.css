@@ -21,11 +21,29 @@
   border-right: 2px solid #ffffff;
 }
 .main-container {
-  margin-left: 325px;
   margin-right: 25px;
   margin-top: 25px;
   margin-bottom: 25px;
 }
+.main-container ul li {
+ 	list-style-type: circle;
+}
+.main-container ol li {
+	list-style-type: decimal;
+}
+pre code {
+  padding: 2px;
+}
 code {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0,0,0,0.1);
+}
+@media only screen and (min-width: 992px) {
+  .main-container {
+    margin-left: 325px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .main-container {
+    margin-left: 25px;
+  }
 }
